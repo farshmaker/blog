@@ -6,7 +6,9 @@ import java.time.LocalDateTime;
  * @author e.karachun
  * @version 28.11.2017
  */
-public class Publication extends DomainObject {
+public class Publication{
+
+    Long id;
 
     String title;
 
@@ -17,6 +19,14 @@ public class Publication extends DomainObject {
     LocalDateTime updateDate;
 
     User author;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;

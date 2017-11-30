@@ -1,7 +1,5 @@
 package com.farshmaker.blog.service;
 
-import com.farshmaker.blog.domain.DomainObject;
-
 import java.util.Collection;
 
 /**
@@ -9,7 +7,7 @@ import java.util.Collection;
  * @version 28.11.2017
  * @param <T> domainObject subclass
  */
-public interface AbstractDomainObjectService<T extends DomainObject> {
+public interface AbstractDomainObjectService<T> {
 
     /**
      * Saving new object to storage or updating existing one

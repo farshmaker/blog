@@ -1,6 +1,7 @@
 package com.farshmaker.blog.service.impl;
 
 import com.farshmaker.blog.domain.User;
+import com.farshmaker.blog.repository.UserRepository;
 import com.farshmaker.blog.service.UserService;
 
 import java.util.Collection;
@@ -11,7 +12,11 @@ import java.util.Collection;
  */
 public class UserServiceImpl implements UserService {
 
+    private UserRepository userRepository;
 
+    public UserServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @Override
     public User getUserByEmail(String email) {
@@ -20,7 +25,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User save(User object) {
-        return null;
+        return userRepository.save(object);
     }
 
     @Override
@@ -35,6 +40,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Collection<User> getAll() {
-        return null;
+        return userRepository.getAll();
     }
 }
